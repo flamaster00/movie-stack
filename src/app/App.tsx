@@ -1,18 +1,23 @@
-import { Link, Route, Routes } from "react-router-dom";
-import "./styles/index.scss";
-import { useTheme } from "./providers/ThemeProvider";
-import { classNames } from "shared/lib";
-import { AppRouter } from "./providers/router";
+import './styles/index.scss';
+import { classNames } from 'shared/lib';
+import { Navbar } from 'widgets/Navbar';
+import { Sidebar } from 'widgets/Sidebar';
+import { Suspense } from 'react';
+import { AppRouter } from './providers/router';
+import { useTheme } from './providers/ThemeProvider';
 
 const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
-    <div className={classNames("app", {}, [theme])}>
-      <Link to={"/"}>Главная</Link>
-      <Link to={"/about"}>О сайте</Link>
-      <button onClick={toggleTheme}>Toggle theme</button>
-      <AppRouter />
+    <div className={classNames('app', {}, [theme])}>
+      <Suspense fallback="">
+        <Navbar />
+        <div className="content-page">
+          <Sidebar />
+          <AppRouter />
+        </div>
+      </Suspense>
     </div>
   );
 };
