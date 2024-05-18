@@ -2,5 +2,9 @@
   "Welcome to React": "Welcome to React",
   "Translate": "Translate",
   "change language": "Русский",
-  "Page not found": "Page not found"
+  "Page not found": "Page not found",
+  "Something went wrong": "Something went wrong",
+  "toggle sidebar": "toggle sidebar",
+  "link-main": "link-main",
+  "link-about": "link-about"
 }
