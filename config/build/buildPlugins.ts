@@ -5,9 +5,9 @@ import webpack from 'webpack';
 import { BuildOptions } from './types/config';
 
 export function buildPlugins({
-  paths,
+  paths, isDev,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-  return [
+  const plugins = [
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
       template: paths.html,
@@ -18,11 +18,17 @@ export function buildPlugins({
       chunkFilename: 'css/[name].[contenthash:8].css',
     }),
     new webpack.DefinePlugin({
-      __IS_DEV__: JSON.stringify(true),
+      __IS_DEV__: JSON.stringify(isDev),
     }),
-    new webpack.HotModuleReplacementPlugin({}),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    }),
+
   ];
+
+  if (isDev) {
+    plugins.push(new webpack.HotModuleReplacementPlugin({}));
+    plugins.push(new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }));
+  }
+
+  return plugins;
 }
