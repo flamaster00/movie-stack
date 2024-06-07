@@ -30,5 +30,19 @@
 .collapseBtn {
   position: absolute;
   right: 0;
-  top: 40px;
+  top: 0;
+}
+
+.links {
+  margin: 50px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  margin-top: 10px;
+}
+
+.linkIcon {
+  fill: var(--inverted-primary-color);
 }
