@@ -18,10 +18,9 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
       onClick={toggleTheme}
     >
       {theme === Theme.LIGHT ? (
-      // eslint-disable-next-line i18next/no-literal-string
-        <DarkThemeIcon fill="black" />
+        <DarkThemeIcon fill="white" />
       ) : (
-        <LightThemeIcon />
+        <LightThemeIcon fill="black" />
       )}
     </Button>
   );
