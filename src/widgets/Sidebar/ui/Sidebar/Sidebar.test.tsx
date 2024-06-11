@@ -1,16 +1,16 @@
 import { fireEvent, screen } from '@testing-library/react';
 import { Sidebar } from 'widgets/Sidebar';
+import { componentRender } from 'shared/lib/tests/componentRender/componentRender';
 // can't save without formatting
 // eslint-disable-next-line max-len
-import { renderWithTranslation } from 'shared/lib/tests/renderWithTranslation/renderWithTranslation';
 
 describe('Sidebar', () => {
   test('render button', () => {
-    renderWithTranslation(<Sidebar />);
+    componentRender(<Sidebar />);
     expect(screen.getByTestId('sidebar'));
   });
   test('toggle collapsed', () => {
-    renderWithTranslation(<Sidebar />);
+    componentRender(<Sidebar />);
     const toggleBtn = screen.getByTestId('sidebar-toggle-test');
     expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     fireEvent.click(toggleBtn);
