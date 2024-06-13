@@ -21,9 +21,8 @@
 .content {
   padding: 20px;
   border-radius: 12px;
-  background: white;
-  color: black;
   max-width: 60%;
+  background: var(--bg-color);
   transform: scale(60%);
   transition: transform 0.3s;
 }
