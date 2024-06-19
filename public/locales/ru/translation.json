@@ -11,5 +11,8 @@
   "Log in": "Войти",
   "enter username": "Имя пользователя",
   "enter password": "Пароль",
-  "Submit login form": "Войти"
+  "Submit login form": "Войти",
+  "Auth form": "Авторизация",
+  "Invalid username or password": "Неверный логин или пароль",
+  "Log out": "Выйти"
 }
