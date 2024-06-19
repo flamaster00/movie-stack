@@ -42,7 +42,7 @@ module.exports = {
       'error',
       {
         markupOnly: true,
-        ignoreAttribute: ['data-testid', 'to', 'fill'],
+        ignoreAttribute: ['data-testid', 'to', 'fill', 'placeholder'],
       },
     ],
     'max-len': ['error', {
@@ -52,6 +52,10 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'no-param-reassign': 'off',
+    'jsx-a11y/label-has-associated-control': ['error', {
+      controlComponents: ['Input'],
+      depth: 3,
+    }],
   },
   globals: {
     __IS_DEV__: true,

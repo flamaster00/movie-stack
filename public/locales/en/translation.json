@@ -8,5 +8,8 @@
   "link-main": "Main page",
   "link-about": "About page",
   "change language short": "Ru",
-  "Log in": "Sign in"
+  "Log in": "Sign in",
+  "enter username": "Username",
+  "enter password": "Password",
+  "Submit login form": "Log in"
 }

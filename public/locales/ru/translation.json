@@ -8,5 +8,8 @@
   "link-main": "Главная",
   "link-about": "О нас",
   "change language short": "En",
-  "Log in": "Войти"
+  "Log in": "Войти",
+  "enter username": "Имя пользователя",
+  "enter password": "Пароль",
+  "Submit login form": "Войти"
 }
