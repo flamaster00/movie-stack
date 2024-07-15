@@ -1,5 +1,7 @@
 name: linting, testing, building
 run-name: checking for errors
+env:
+  HUSKY: 0
 on:
   push:
     branches: [ master ]
