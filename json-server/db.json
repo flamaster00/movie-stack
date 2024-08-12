@@ -29,7 +29,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "firstname": "Name",
+    "lastname": "Lastname",
+    "age": 30,
+    "country": "Russia",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": "undefined"
   },
   "users": [
     {
