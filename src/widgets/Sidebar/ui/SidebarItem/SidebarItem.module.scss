@@ -1,29 +1,26 @@
- 
-  .SidebarItem {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
+.SidebarItem {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.link {
+  opacity: 1;
+  width: fit-content;
+  transition: opacity 0.1s 0.05s, width 0.1s 0.05s;
+  white-space: nowrap;
+}
+
+.SidebarItemIcon {
+  fill: var(--inverted-primary-color);
+  margin-right: 5px;
+  flex-shrink: 0;
+}
+
+.collapsed {
   .link {
-    opacity: 1;
-    width: fit-content;
-    transition: opacity 0.1s 0.05s, width 0.1s 0.05s;
-    white-space: nowrap;
+    opacity: 0;
+    width: 0;
+    transition: opacity 0.2s, width 0.2s;
   }
-  
-  .SidebarItemIcon {
-    fill: var(--inverted-primary-color);
-    margin-right: 5px;
-    flex-shrink: 0;
-  }
-  
-  .collapsed {
-  
-    .link {
-      opacity: 0;
-      width: 0;
-      transition: opacity 0.2s, width 0.2s;
-    }
-  }
-  
+}
